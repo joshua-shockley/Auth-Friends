@@ -19,11 +19,12 @@ const handleSubmit = (e) => {
 
     return(
         <form onSubmit={handleSubmit}>
-            <fieldset>
+            <fieldset className="friend-form">
              <h1>Did You Make A New Friend?..</h1>
             <h3>Add Them Friendlies Here.</h3>
 
                 <input
+                className="input-field"
                 type="text"
                 name="name"
                 placeholder="Freindlies Name"
@@ -32,6 +33,7 @@ const handleSubmit = (e) => {
                 />
 
                 <input
+                className="input-field"
                 type="text"
                 name="age"
                 placeholder="Age"
@@ -39,13 +41,14 @@ const handleSubmit = (e) => {
                 onChange={handleChange}
                 />
                 <input
+                className="input-field"
                 type="text"
                 name="email"
                 placeholder="Email"
                 value={newPerson.email}
                 onChange={handleChange}
                 />
-                <button >Submit New Friendly</button>
+                <button className="submit-btn" >Submit New Friendly</button>
             </fieldset>
         </form>
     );    

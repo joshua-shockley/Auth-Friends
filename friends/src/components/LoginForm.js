@@ -26,7 +26,7 @@ axiosWithAuth()
 
     return(
         <form onSubmit={login}>
-            <fieldset>
+            <fieldset className="login-form">
                     <input
                         className="form-input"
                         type="text"

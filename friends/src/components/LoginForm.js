@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth.js';
 
 
-const LoginForm = () => {
-const [credentials, setCredentials]=useState({username: '', password: ''});
+const LoginForm = (props) => {
+const [credentials, setCredentials]= useState({username: '', password: ''});
 
-handleChange = e => {
+const handleChange = e => {
     setCredentials({...credentials, [e.target.name]: e.target.value});
 };
 
-login = e => {
+const login = e => {
 e.preventDefault();
 
 axiosWithAuth()
@@ -17,7 +17,7 @@ axiosWithAuth()
 .then(res => {
     console.log(res.data.payload);
     localStorage.setItem('token', res.data.payload);
-    props.history.push('/protected');
+    props.history.push('/friendsList');
 })
 .catch(err => console.log(err));
 
@@ -28,24 +28,25 @@ axiosWithAuth()
         <form onSubmit={login}>
             <fieldset>
                     <input
-                    type="text"
-                        name="name"
+                        className="form-input"
+                        type="text"
+                        name="username"
                         placeholder="name here"
                         value={credentials.username}
                         onChange={handleChange}
                     />
 
                     <input
+                        className="form-input"
                         type="password" 
                         name="password"
                         placeholder="password"
                         value={credentials.password}
                         onChange={handleChange}
                     />
-
                     <button
+                    className="form-btn"
                     type="submit"
-                    className="login-btn"
                     >login button</button>
             </fieldset>
         </form>

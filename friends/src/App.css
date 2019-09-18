@@ -1,0 +1,83 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-bottom: 50px;
+}
+
+.submit-btn {
+    background: #353b46;
+    color: #61dafb;
+    height: 35px;
+    width: 120px;
+    border-radius: 25px;
+    box-shadow: 2px 2px rgb(3, 3, 100);
+}
+
+.form-btn {
+    font-size: 1.1rem;
+    background: #353b46;
+    color: #61dafb;
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    box-shadow: 2px 2px rgb(3, 3, 100);
+    margin: 50px;
+    padding: 2px;
+}
+
+.friend-form {
+    margin: 20px;
+    background: whitesmoke;
+}
+
+.theLinks {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 50px;
+    width: 120px;
+    background: #353b46;
+    color: #61dafb;
+    border-radius: 25px;
+    margin: 20px;
+    box-shadow: 2px 2px rgb(3, 3, 100);
+}
+
+.input-field {
+    margin: 10px;
+}
+
+.form-input {
+    font-size: 1.14rem;
+    margin: 50px;
+    width: 150px;
+    height: 40px;
+}
+
+.login-form {
+    background: whitesmoke;
+}
+
+.individual-friend {
+    margin: 40px auto;
+    padding: 15px;
+    width: 60%;
+    background: whitesmoke;
+}
